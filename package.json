@@ -1,7 +1,7 @@
 {
   "name": "gulp-unseen",
   "description": "Only let through identical files once, and save state to disk.",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "homepage": "https://github.com/steadicat/gulp-unseen",
   "repository": {
     "type": "git",

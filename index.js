@@ -24,9 +24,11 @@ function getSeen(manifest) {
 
 module.exports = {
   skip: function(manifest) {
-    var seen = getSeen(manifest);
+    var seen;
 
     return through.obj(function(file, enc, cb) {
+      if (!seen) seen = getSeen(manifest)
+
       if (file.isStream()) {
         return cb(new gutil.PluginError('gulp-unseen', {
           message: 'Streams are not supported',
